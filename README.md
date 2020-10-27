@@ -13,3 +13,7 @@ https://web.archive.org/web/20160612084530/http://forum.mixshop.com/viewtopic.ph
 Originally I uploaded version 1.5.5 of my build here.
 
 To compile you will need to use the arduino 1.6.0 DE
+
+Zip file of the latest source:
+https://github.com/MrLundy/Baboi/releases
+
