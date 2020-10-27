@@ -11,3 +11,5 @@ https://web.archive.org/web/20160612084530/http://forum.mixshop.com/viewtopic.ph
  Chris's modification of Colin's build.
 
 Originally I uploaded version 1.5.5 of my build here.
+
+To compile you will need to use the arduino 1.6.0 DE
