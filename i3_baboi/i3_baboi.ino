@@ -126,7 +126,7 @@ Chris Lundy modifying firmware from Colin Wales (V10.1) http://forum.mixshop.com
 
 1.5.5
 - Change PID for hotend because it can't sustain high temps, and shuts off after a while.
-
+- trying to fix corrupt files. Sync caused them?
 
 */
 
@@ -2444,8 +2444,8 @@ lcd.print("Colin's Build 10.1");
 lcd.setCursor(0,2);
 lcd.print("Lundy's mod 1.5.5");
 lcd.setCursor(0,3);
-lcd.print("2020-09-01");
-delay(4000);
+lcd.print("2021-01-27");
+delay(5000);
 //FileListMenu(cursorLoc, selectedIndex);
 MainMenu(MainMenuIndex);
 //target_raw = temp2analogh(target_temp = 200);
