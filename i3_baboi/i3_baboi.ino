@@ -227,7 +227,7 @@ void __cxa_pure_virtual(){};
 // M603 - Show Free Ram
 
 
-#define _VERSION_TEXT "1.3.11T-CW10.1-CNL1.5.4 / 2019-07-08"
+#define _VERSION_TEXT "1.3.11T-CW10.1-CNL1.6 / 2022-06-02"
 
 //Stepper Movement Variables
 char axis_codes[NUM_AXIS] = {'X', 'Y', 'Z', 'E'};
@@ -2442,9 +2442,9 @@ lcd.print("Mixshop Prusa I3");
 lcd.setCursor(0,1);
 lcd.print("Colin's Build 10.1");
 lcd.setCursor(0,2);
-lcd.print("Lundy's mod 1.5.5");
+lcd.print("Lundy's mod 1.6");
 lcd.setCursor(0,3);
-lcd.print("2021-01-27");
+lcd.print("2022-06-02");
 delay(5000);
 //FileListMenu(cursorLoc, selectedIndex);
 MainMenu(MainMenuIndex);
@@ -3375,6 +3375,21 @@ FORCE_INLINE void process_commands()
           
         }
         break;
+      case 18: //New case to disable steppers with m18. Identical to m84 from above
+        st_synchronize(); // wait for all movements to finish
+        if(code_seen('S'))
+        {
+          stepper_inactive_time = code_value() * 1000; 
+        }
+        else
+        { 
+          disable_x(); 
+          disable_y(); 
+          disable_z(); 
+          disable_e();
+          
+        }
+        break;        
       case 85: // M85
         code_seen('S');
         max_inactive_time = code_value() * 1000; 
