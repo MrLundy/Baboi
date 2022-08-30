@@ -143,7 +143,7 @@ const bool max_software_endstops = true; //If true, axis won't move to coordinat
 //Max Length for Prusa i3, check the ways of your axis and set this Values
 //-----------------------------------------------------------------------
 const int X_MAX_LENGTH = 165;
-const int Y_MAX_LENGTH = 225;
+const int Y_MAX_LENGTH = 220; //225 to 220 to avoid crashing 2022-08-30
 const int Z_MAX_LENGTH = 150;
 
 //-----------------------------------------------------------------------
